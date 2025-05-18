@@ -27,6 +27,12 @@ const TextInput = () => {
         onChange={handleTextChange}
         placeholder="Start typing..."
         className="text-input"
+        spellCheck="false"
+        autoCorrect="off"
+        autoCapitalize="off"
+        data-gramm="false"
+        data-gramm_editor="false"
+        data-enable-grammarly="false"
       />
       <div className="displayed-text">
         {displayedWords.join(' ')}
@@ -52,11 +58,14 @@ const TextInput = () => {
           outline: none;
           color: transparent;
           caret-color: #333; /* Makes cursor visible while text is invisible */
+          -webkit-text-fill-color: transparent;
+          -webkit-box-shadow: 0 0 0px 1000px white inset; /* Prevents autofill background color */
         }
         
         .text-input::placeholder {
           color: #999; /* Keep placeholder visible */
           opacity: 1;
+          -webkit-text-fill-color: #999;
         }
         
         .text-input:focus {
