@@ -41,46 +41,72 @@ const TextInput = () => {
         Words: {wordCount}
       </div>
       <style>{`
+        :root {
+          --primary-blue: #1e88e5;
+          --light-blue: #e3f2fd;
+          --secondary-blue: #bbdefb;
+          --primary-orange: #ff9800;
+          --light-orange: #fff3e0;
+        }
+
+        body {
+          background: linear-gradient(135deg, var(--light-blue) 20%, var(--secondary-blue) 40%, var(--light-orange) 100%);
+          min-height: 100vh;
+          margin: 0;
+        }
+
         .text-input-container {
           display: flex;
           flex-direction: column;
           align-items: center;
           gap: 1rem;
           padding: 2rem;
+          background: rgba(255, 255, 255, 0.85);
+          border-radius: 12px;
+          box-shadow: 0 4px 6px rgba(30, 136, 229, 0.15);
+          backdrop-filter: blur(10px);
         }
         
         .text-input {
           width: 300px;
-          padding: 0.5rem;
+          padding: 0.8rem;
           font-size: 1.1rem;
-          border: 2px solid #ccc;
-          border-radius: 4px;
+          border: 2px solid var(--primary-blue);
+          border-radius: 8px;
           outline: none;
           color: transparent;
-          caret-color: #333; /* Makes cursor visible while text is invisible */
+          caret-color: var(--primary-orange);
           -webkit-text-fill-color: transparent;
-          -webkit-box-shadow: 0 0 0px 1000px white inset; /* Prevents autofill background color */
+          -webkit-box-shadow: 0 0 0px 1000px white inset;
+          transition: border-color 0.3s ease;
+          background: white;
         }
         
         .text-input::placeholder {
-          color: #999; /* Keep placeholder visible */
+          color: #94a3b8;
           opacity: 1;
-          -webkit-text-fill-color: #999;
+          -webkit-text-fill-color: #94a3b8;
         }
         
         .text-input:focus {
-          border-color: #007bff;
+          border-color: var(--primary-orange);
+          box-shadow: 0 0 0 3px var(--light-orange);
         }
         
         .displayed-text {
           min-height: 1.5rem;
           font-size: 1.2rem;
-          color: #333;
+          color: var(--primary-blue);
+          padding: 0.5rem 1rem;
+          background: var(--light-blue);
+          border-radius: 6px;
+          transition: all 0.3s ease;
         }
         
         .word-count {
           font-size: 0.9rem;
-          color: #666;
+          color: var(--primary-orange);
+          font-weight: 500;
         }
       `}</style>
     </div>

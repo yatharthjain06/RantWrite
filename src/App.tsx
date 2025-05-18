@@ -13,12 +13,16 @@ function App() {
           flex-direction: column;
           align-items: center;
           padding-top: 4rem;
-          background-color: #f5f5f5;
         }
         
         h1 {
-          color: #333;
+          color: #1e88e5;
           margin-bottom: 2rem;
+          font-size: 2.5rem;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+          background: -webkit-linear-gradient(45deg, #1e88e5, #ff9800);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       `}</style>
     </div>
