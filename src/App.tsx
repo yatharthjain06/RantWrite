@@ -4,7 +4,7 @@ import TextInput from './components/TextInput'
 function App() {
   return (
     <div className="app">
-      <h1>Rant Write</h1>
+      <h1>RantWrite</h1>
       <TextInput />
       <style>{`
         .app {
